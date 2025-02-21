@@ -4,9 +4,9 @@ var currentStream;
 // Define constants
 // Get the element in the document with id="camera-view", "camera-device", "photo-display", "take-photo-button" and "front-camera-button"
 const
-    cameraView = document.querySelector("#camera-view");
-    cameraDevice = document.querySelector("#camera-device");
-    photoDisplay = document.querySelctor("#photo-display");
+    cameraView = document.querySelector("#camera-view"),
+    cameraDevice = document.querySelector("#camera-device"),
+    photoDisplay = document.querySelctor("#photo-display"),
     takePhotoButton = document.querySelector("#take-photo-button");
     frontPhotoButton = document.querySelector("#front-camera-button");
     

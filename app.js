@@ -11,10 +11,10 @@ const
     frontPhotoButton = document.querySelector("#front-camera-button");
     
 function cameraStart(){
-    if(typeof currentStream !=="undefined"){
+    if(typeof currentStream !== 'undefined'){
         currentStream.getTracks().forEach(track =>{
             track.stop();
-        })
+        });
     }
 }
 
@@ -33,13 +33,13 @@ navigator.mediaDevices
 takePhotoButton.onclick=function(){
     cameraView.width = cameraDevice.videoWidth;
     cameraView.height = cameraDevice.videoHeight;
-    caneraView.getContext("2d").drawImage(cameraDevice,0,0);
+    cameraView.getContext("2d").drawImage(cameraDevice,0,0);
     photoDisplay.src = cameraView.toDataURL("image/webp");
     photoDisplay.classList.add("photo-taken");
 };
 
 frontCameraButton.onclick=function(){
-    frontCamera =!frontCamera;
+    frontCamera = !frontCamera;
     if(frontCamera){
         frontCameraButton.textContent ="Back Camera";
     }

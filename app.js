@@ -16,9 +16,7 @@ function cameraStart(){
             track.stop();
         });
     }
-}
-
-var constraints = {video:{facingMode:(frontCamera?"user":"environment")},audio:false};
+    var constraints = {video:{facingMode:(frontCamera?"user":"environment")},audio:false};
 
 navigator.mediaDevices
     .getUserMedia(constraints)
@@ -29,6 +27,7 @@ navigator.mediaDevices
     .catch(function(error){
         console.error("Error happened.",error);
 });
+}
 
 takePhotoButton.onclick=function(){
     cameraView.width = cameraDevice.videoWidth;
